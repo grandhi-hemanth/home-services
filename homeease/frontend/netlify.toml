@@ -1,0 +1,9 @@
+[build]
+  command = "npm install --include=dev && npm run build"
+  publish = "dist"
+
+# Single-page app fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
