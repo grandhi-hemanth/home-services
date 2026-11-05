@@ -1,0 +1,138 @@
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(24,168,120,0.3);
+}
+
+.service-card-image {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.service-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-card-image img {
+  transform: scale(1.05);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--secondary);
+  color: var(--white);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.service-category-tag {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(20,43,74,0.85);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+}
+
+.service-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.service-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.service-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+.service-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.service-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rating-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.review-count {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.service-duration {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.service-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-price { display: flex; flex-direction: column; }
+
+.price-label {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.price-amount {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary);
+}

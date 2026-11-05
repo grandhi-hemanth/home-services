@@ -1,0 +1,139 @@
+.pro-dashboard { min-height: 80vh; }
+.pro-dashboard-header { background: var(--primary); padding: 32px 0; }
+.pro-header-content { display: flex; align-items: center; gap: 20px; }
+.pro-header-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: var(--white); overflow: hidden; flex-shrink: 0; }
+.pro-header-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.pro-dashboard-header h1 { font-size: 1.5rem; font-weight: 800; color: var(--white); }
+.pro-dashboard-header p { color: rgba(255,255,255,0.75); font-size: 0.88rem; margin-top: 4px; }
+
+.pro-dashboard-body { padding: 32px 0 64px; }
+
+.pro-tabs { display: flex; gap: 4px; margin-bottom: 24px; overflow-x: auto; padding-bottom: 4px; }
+.pro-tab { padding: 10px 20px; border-radius: 20px; border: 1.5px solid var(--border); background: var(--white); font-size: 0.88rem; font-weight: 500; cursor: pointer; white-space: nowrap; transition: var(--transition); }
+.pro-tab:hover { border-color: var(--secondary); }
+.pro-tab.active { background: var(--secondary); color: var(--white); border-color: var(--secondary); }
+
+.stat-cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+
+.stat-card {
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--border);
+}
+
+.stat-icon { color: var(--secondary); }
+.stat-info strong { display: block; font-size: 1.6rem; font-weight: 900; color: var(--primary); }
+.stat-info span { font-size: 0.82rem; color: var(--text-secondary); }
+
+.recent-bookings { padding: 24px; margin-bottom: 20px; }
+.recent-bookings h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 16px; }
+
+.profile-incomplete {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 20px;
+  background: #FEF9C3;
+  border: 1px solid #FCD34D;
+  border-radius: var(--radius-sm);
+  color: #854D0E;
+}
+
+.profile-incomplete strong { display: block; font-size: 0.9rem; margin-bottom: 4px; }
+.profile-incomplete p { font-size: 0.83rem; }
+
+/* Booking rows */
+.pro-booking-list { display: flex; flex-direction: column; gap: 0; }
+
+.pro-booking-row {
+  border-bottom: 1px solid var(--border);
+}
+
+.pro-booking-row:last-child { border-bottom: none; }
+
+.pro-booking-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.pro-booking-meta { display: flex; align-items: center; gap: 8px; min-width: 140px; }
+.booking-id-small { font-size: 0.72rem; font-family: monospace; color: var(--text-secondary); }
+
+.pro-booking-info { flex: 1; }
+.pro-booking-info strong { display: block; font-size: 0.9rem; font-weight: 600; color: var(--primary); }
+.pro-booking-info span { font-size: 0.82rem; color: var(--text-secondary); }
+
+.pro-booking-time { display: flex; flex-direction: column; gap: 2px; }
+.pro-booking-time span { display: flex; align-items: center; gap: 4px; font-size: 0.82rem; color: var(--text-secondary); }
+
+.pro-booking-amount { font-weight: 700; font-size: 0.95rem; color: var(--primary); }
+
+.pro-booking-expanded {
+  padding: 0 0 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+.pro-booking-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 12px 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.booking-group { padding: 24px; margin-bottom: 16px; }
+.booking-group-title { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; font-weight: 700; margin-bottom: 12px; }
+.booking-count { color: var(--text-secondary); font-weight: 400; font-size: 0.85rem; }
+
+/* Reviews */
+.reviews-summary { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+.avg-rating-display { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.avg-rating-display strong { font-size: 3rem; font-weight: 900; color: var(--primary); }
+.star-row { display: flex; gap: 4px; }
+.avg-rating-display span { font-size: 0.85rem; color: var(--text-secondary); }
+
+.reviews-feed { display: flex; flex-direction: column; gap: 16px; }
+.review-feed-item { border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+.review-feed-item:last-child { border-bottom: none; }
+.review-feed-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.review-feed-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--secondary); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+.review-feed-header strong { font-size: 0.9rem; display: block; }
+.review-feed-date { font-size: 0.78rem; color: var(--text-secondary); margin-left: auto; }
+.review-feed-comment { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; }
+
+/* Availability */
+.availability-panel { padding: 24px; }
+.availability-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.availability-header h3 { font-size: 1rem; font-weight: 700; color: var(--primary); }
+.availability-grid { display: flex; flex-direction: column; gap: 0; }
+
+.avail-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.avail-row:last-child { border-bottom: none; }
+.avail-row.unavailable { opacity: 0.5; }
+.avail-day { font-weight: 600; font-size: 0.9rem; color: var(--primary); width: 100px; flex-shrink: 0; }
+
+.avail-edit { display: flex; align-items: center; gap: 8px; }
+.avail-edit input[type="time"] { padding: 6px 10px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); font-size: 0.85rem; }
+
+.avail-open { color: var(--success); font-size: 0.88rem; font-weight: 500; }
+.avail-closed { color: var(--error); font-size: 0.82rem; }
+
+@media (max-width: 768px) {
+  .stat-cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .pro-booking-header { flex-wrap: wrap; }
+}
