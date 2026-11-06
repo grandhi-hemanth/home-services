@@ -11,7 +11,10 @@ const app    = express();
 const SECRET = process.env.JWT_SECRET || 'homeease_secret';
 
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://home-services-3b4k-one.vercel.app'],
+  credentials: true,
+}));
 
 // ─── Helpers ────────────────────────────────────────────────
 const genToken = (id) => jwt.sign({ id }, SECRET, { expiresIn: '7d' });
